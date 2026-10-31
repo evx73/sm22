@@ -1,0 +1,12 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="robots" content="noindex,nofollow"><title>SM22</title><style>html,body{margin:0;height:100%;font:16px sans-serif}#message{padding:2rem}iframe{border:0;width:100%;height:100%;display:none}</style></head><body><div id="message">Checking access…</div><iframe id="content" title="SM22"></iframe><script>
+(async()=>{
+ const key=new URLSearchParams(location.search).get('key')||'';
+ if(!key){document.getElementById('message').textContent='Access link required';return;}
+ try {
+  const r=await fetch('https://lumi-visitor-gate.evx73.workers.dev',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({key,page:location.pathname})});
+  if(!r.ok)throw Error('denied');
+  document.getElementById('message').remove();
+  const frame=document.getElementById('content');frame.src='./index.html';frame.style.display='block';
+ }catch(e){document.getElementById('message').textContent='Access denied or connection unavailable';}
+})();
+</script></body></html>
