@@ -1,13 +1,4 @@
 <!doctype html><html><head>
-<meta name="robots" content="noindex, nofollow, noarchive"><meta charset="utf-8"><meta name="robots" content="noindex,nofollow"><title>SM22</title><style>html,body{margin:0;height:100%;font:16px sans-serif}#message{padding:2rem}iframe{border:0;width:100%;height:100%;display:none}</style></head><body><div id="message">Checking access…</div><iframe id="content" title="SM22"></iframe><script>
-(async()=>{
- const key=new URLSearchParams(location.search).get('key')||'';
- if(!key){location.replace('https://evx73.github.io/sm22/404.html');return;}
- try {
-  const r=await fetch('https://lumi-visitor-gate.evx73.workers.dev',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({key,page:location.pathname})});
-  if(!r.ok)throw Error('denied');
-  document.getElementById('message').remove();
-  const frame=document.getElementById('content');frame.src='./content-Z0KEoLK3P5-Mkqt11s9I7jVL.html';frame.style.display='block';
- }catch(e){location.replace('https://evx73.github.io/sm22/404.html');}
-})();
+<meta name="robots" content="noindex, nofollow, noarchive"><meta charset="utf-8"><meta name="robots" content="noindex,nofollow"><title>SM22</title><style>html,body{margin:0;height:100%}iframe{border:0;width:100%;height:100%;display:none}</style></head><body><iframe id="content" title="Presentation"></iframe><script>
+(async()=>{const deny=()=>location.replace('https://evx73.github.io/sm22/404.html');const key=new URLSearchParams(location.search).get('key');if(!key){deny();return;}try{const r=await fetch('https://lumi-visitor-gate.evx73.workers.dev',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({key,page:location.pathname})});if(!r.ok){deny();return;}const frame=document.getElementById('content');frame.src="./content-ed1e277ee79bd50064c038e06cff9ba3eff2.html";frame.style.display='block';}catch(e){deny();}})();
 </script></body></html>
